@@ -11,20 +11,14 @@ import java.util.ArrayList;
 
 public interface ProductRepository extends JpaRepository<CartItem, Long> {
 
-//    @Query("SELECT t FROM Todo1 t WHERE t.id = :id")
-//    ArrayList<Todo1> findTodoById(@Param("id") Long id);
-//
-//    @Query("SELECT t FROM Todo1 t WHERE t.status = :status")
-//    ArrayList<Todo1> findTodoByStatus(@Param("status") Status status);
-//
-//    @Query("SELECT t FROM Todo1 t WHERE t.status = :statusstring")
-//    ArrayList<Todo1> findTodoByStatusString(@Param("statusstring") String statusstring);
-//
-//    @Modifying
-//    @Query("DELETE FROM Todo1 t WHERE t.id = :id")
-//    @Transactional
-//    void deleteTodo(@Param("id") Long id);
-//
+    @Query("SELECT c FROM CartItem c WHERE c.id = :id")
+    ArrayList<CartItem> findCartItemById(@Param("id") Long id);
+
+    @Modifying
+    @Query("DELETE FROM CartItem c WHERE c.id = :id")
+    @Transactional
+    void deleteTodo(@Param("id") Long id);
+
 //    @Modifying
 //    @Query("UPDATE Todo1 t SET t.title = :title WHERE t.id = :id")
 //    @Transactional

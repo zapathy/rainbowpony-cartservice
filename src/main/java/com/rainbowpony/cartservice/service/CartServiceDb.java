@@ -37,4 +37,8 @@ public class CartServiceDb {
 //        if (getCartContents().stream().anyMatch(cartItem -> cartItem.getId() == id)) cart.put(id, cart.get(id) - 1);
 //        else cart.remove(id);
 //    }
+
+//    public boolean idIsInCart(Long id) {
+//
+//    }
 }
