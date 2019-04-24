@@ -8,6 +8,7 @@ import java.util.HashMap;
 
 @RestController
 @RequestMapping("/products")
+@CrossOrigin
 public class CartController {
 
     @Autowired
