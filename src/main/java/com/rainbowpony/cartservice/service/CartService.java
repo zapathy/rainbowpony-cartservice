@@ -6,6 +6,7 @@ import java.util.HashMap;
 
 @Service
 public class CartService {
+
     private HashMap<Long, Integer> cart = new HashMap<>();
 
     public void addToCart(Long id) {
