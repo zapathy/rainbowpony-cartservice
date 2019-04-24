@@ -10,7 +10,7 @@ public class CartService {
     private HashMap<Long, Integer> cart = new HashMap<>();
 
     public void addToCart(Long id) {
-        if (cart.containsKey(id)) cart.put(id, cart.get(id)+1);
+        if (cart.containsKey(id)) cart.put(id, cart.get(id) + 1);
         else cart.put(id, 1);
     }
 

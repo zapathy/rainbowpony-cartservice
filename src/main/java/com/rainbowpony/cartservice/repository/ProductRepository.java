@@ -17,10 +17,12 @@ public interface ProductRepository extends JpaRepository<CartItem, Long> {
     @Modifying
     @Query("DELETE FROM CartItem c WHERE c.id = :id")
     @Transactional
-    void deleteTodo(@Param("id") Long id);
+    void deleteCartItemById(@Param("id") Long id);
 
-//    @Modifying
-//    @Query("UPDATE Todo1 t SET t.title = :title WHERE t.id = :id")
-//    @Transactional
-//    void updateTitle(@Param("title") String title, @Param("id") Long id);
+    @Modifying
+    @Query("UPDATE CartItem c SET c.amount = :amount WHERE c.id = :id")
+    @Transactional
+    void updateCartItemById(@Param("id") Long id, @Param("amount") Integer amount);
+
+
 }
