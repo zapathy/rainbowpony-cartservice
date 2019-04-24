@@ -18,8 +18,8 @@ public class CartController {
         return cartService.getCartContents();
     }
 
-    @PostMapping("/")
-    public void uploadNewShoppingCart(Long id) {
+    @PostMapping("/{id}")
+    public void uploadNewShoppingCart(@PathVariable("id") Long id) {
         cartService.addToCart(id);
     }
 
