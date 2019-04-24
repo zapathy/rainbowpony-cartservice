@@ -13,7 +13,7 @@ public class CartController {
     @Autowired
     CartService cartService;
 
-    @GetMapping("/")
+    @GetMapping("")
     public HashMap<Long, Integer> getEntireCart() {
         return cartService.getCartContents();
     }
@@ -23,7 +23,7 @@ public class CartController {
         cartService.addToCart(id);
     }
 
-    @DeleteMapping("/")
+    @DeleteMapping("")
     public void deleteEntireCart() {
         cartService.deleteEntireCart();
     }
