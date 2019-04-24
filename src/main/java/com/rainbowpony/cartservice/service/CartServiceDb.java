@@ -38,7 +38,10 @@ public class CartServiceDb {
 //        else cart.remove(id);
 //    }
 
-//    public boolean idIsInCart(Long id) {
-//
-//    }
+    public boolean idIsInCart(Long id) throws DuplicateItemException {
+        int numberOfIds = productRepository.findCartItemById(id).size();
+        if (numberOfIds == 0) return false;
+        else if (numberOfIds == 1) return true;
+        else throw new DuplicateItemException();
+    }
 }
