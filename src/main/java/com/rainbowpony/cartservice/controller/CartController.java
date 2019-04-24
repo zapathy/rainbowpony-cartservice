@@ -16,7 +16,7 @@ import java.util.List;
 public class CartController {
 
     @Autowired
-    CartService cartService;
+    CartServiceDb cartService;
 
     @GetMapping("")
     public ResponseEntity<List<CartItem>> getEntireCart() {
